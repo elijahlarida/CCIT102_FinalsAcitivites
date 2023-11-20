@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <p> Gonzales CarL Lian, Larida Elijah David, Manaig Marion Dave</p>
+    
+    <form action="/action_page.php">
+        <input id="fnum" type="number" placeholder="Enter a number"><br><br>
+        <input id="snum" type="number" placeholder="Enter a number"><br><br>
+        <input id="op" type="number" placeholder="Enter a operation"><br><br>
+        <input id="output" type="number" placeholder="Result"><br><br>
+        <button type="button" onClick="lychee()">Click Here</button>
+    </form>
+
+    <script>
+        function lychee(){
+            var fnum = parseFloat(document.getElementById('fnum').value);
+            var snum = parseFloat(document.getElementById('snum').value);
+            var op = parseInt(document.getElementById('op').value);
+
+            var total;
+
+            if(op==1){
+                total=fnum+snum;
+            }
+
+           else if(op==2){
+                total=fnum-snum;
+            }
+
+           else if(op==3){
+                total=fnum*snum;
+            }
+
+            else if(op==4){
+                total=fnum/snum;
+            }
+
+            else{
+                total = "Invalid Operation";
+            }
+
+        document.getElementById('output').value = total;
+        }
+    </script>
+</body>
+</html>
